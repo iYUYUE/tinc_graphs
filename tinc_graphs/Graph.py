@@ -7,7 +7,7 @@ from .Availability import get_node_availability
 import sys,json
 from time import time
 DUMP_FILE = os.environ.get("AVAILABILITY_FILE", "tinc-availability.json")
-hostpath=os.environ.get("TINC_HOSTPATH", "/etc/tinc/retiolum/hosts")
+hostpath=os.environ.get("TINC_HOSTPATH", "/etc/tinc/vpn0/hosts")
 
 # will be filled later
 supernodes= []
@@ -101,7 +101,7 @@ def merge_edges(nodes):
 
 
 def print_head():
-  print ('digraph retiolum {')
+  print ('digraph vpn0 {')
   print ('  graph [center=true packMode="clust"]')
   print ('  node[shape=box,style=filled,fillcolor=grey]')
   print ('  overlap=false')

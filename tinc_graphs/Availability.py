@@ -6,7 +6,7 @@ import sys,json,os
 """ TODO: Refactoring needed to pull the edges out of the node structures again,
 it should be easier to handle both structures"""
 DUMP_FILE = os.environ.get("AVAILABILITY_FILE","tinc-availability.json")
-hostpath=os.environ.get("TINC_HOSTPATH", "/etc/tinc/retiolum/hosts")
+hostpath=os.environ.get("TINC_HOSTPATH", "/etc/tinc/vpn0/hosts")
 
 def get_all_nodes():
   return os.listdir(hostpath)

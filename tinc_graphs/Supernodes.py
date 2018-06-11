@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def find_potential_super(path="/etc/tinc/retiolum/hosts"):
+def find_potential_super(path="/etc/tinc/vpn0/hosts"):
   import os
   import re
 
@@ -59,7 +59,7 @@ def check_all_the_super(path):
 
 def main():
   import os
-  hostpath=os.environ.get("TINC_HOSTPATH", "/etc/tinc/retiolum/hosts")
+  hostpath=os.environ.get("TINC_HOSTPATH", "/etc/tinc/vpn0/hosts")
 
   for host,addrs in check_all_the_super(hostpath):
     print("%s %s" %(host,str(addrs)))

@@ -6,7 +6,7 @@ import sys
 import json
 
 
-TINC_NETWORK =os.environ.get("TINC_NETWORK","retiolum")
+TINC_NETWORK =os.environ.get("TINC_NETWORK","vpn0")
 
 # is_legacy is the parameter which defines if the tinc config files are handled old fashioned (parse from syslog), 
 # or if the new and hip tincctl should be used
@@ -27,7 +27,7 @@ This tool dumps all tinc node informations as json
 
 ENVIRONMENT VARIABLES:
   TINC_NETWORK   The tinc network to dump
-                      (default: retiolum)
+                      (default: vpn0)
 """ % argv[0])
   exit(1)
 
