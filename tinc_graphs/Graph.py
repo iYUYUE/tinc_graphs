@@ -241,7 +241,7 @@ def main():
     try:
       for supernode,addr in check_all_the_super(hostpath):
         supernodes.append(supernode)
-    except FileNotFoundError as e:
+    except IOError as e:
       print("!! cannot load list of supernodes ({})".format(hostpath))
       print("!! Use TINC_HOSTPATH env to override")
       sys.exit(1)
