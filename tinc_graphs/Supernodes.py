@@ -7,6 +7,10 @@ def find_potential_super(path="/etc/tinc/vpn0/hosts"):
   needle_addr = re.compile("Address\s*=\s*(.*)")
   needle_port = re.compile("Port\s*=\s*(.*)")
   for f in os.listdir(path):
+    fullpath = os.path.join(path, f)
+    if os.path.isdir(fullpath):
+        # skip directories
+        continue
     try:
       with open(path+"/"+f) as of:
         addrs = []
