@@ -23,7 +23,7 @@ def find_potential_super(path="/etc/tinc/vpn0/hosts"):
             port = port_found.group(1)
 
         if addrs : yield (f ,[(addr ,int(port)) for addr in addrs])
-    except FileNotFoundError as e:
+    except IOError as e:
         print("Cannot open hosts directory to be used to find potential supernodes")
         print("Directory used: {}".format(path))
         raise
