@@ -28,7 +28,11 @@ def dump_graph(nodes):
   graph = {}
   graph['nodes'] = nodes
   graph['timestamp'] = time()
-  f = open(DUMP_FILE,'a')
+  if os.path.exists(filename):
+      append_write = 'a' # append if already exists
+  else:
+      append_write = 'w' # make a new file if not
+  f = open(DUMP_FILE, append_write)
   json.dump(graph,f)
   f.write('\n')
   f.close()
