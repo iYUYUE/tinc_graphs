@@ -19,10 +19,10 @@ do
   # first build, then move to avoid half-built graphs
   "$setter" -T$TYPE -o "$tmpgraph" "$DOTFILE" ||:
   chmod go+rx "$tmpgraph"
-  mv "$tmpgraph" "$out/retiolum_$i.$TYPE"
+  mv "$tmpgraph" "$out/vpn0_$i.$TYPE"
   i=`expr $i + 1`
 done
 
-rm -f "$out/retiolum_1.$TYPE2"
-convert -limit memory 32Mib -limit map 64Mib "$out/retiolum_1.$TYPE"  "$out/retiolum_1.$TYPE2"
+rm -f "$out/vpn0_1.$TYPE2"
+convert -limit memory 32Mib -limit map 64Mib "$out/vpn0_1.$TYPE"  "$out/vpn0_1.$TYPE2"
 rm "$DOTFILE"

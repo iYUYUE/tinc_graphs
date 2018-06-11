@@ -1,9 +1,9 @@
 #!/bin/bash
 
-EXTERNAL_FOLDER=${EXTERNAL_FOLDER:-/var/www/euer.krebsco.de/graphs/retiolum}
-INTERNAL_FOLDER=${INTERNAL_FOLDER:-/var/www/euer/graphs/retiolum}
+EXTERNAL_FOLDER=${EXTERNAL_FOLDER:-/home/wwwroot/tinc/vpn0/public}
+INTERNAL_FOLDER=${INTERNAL_FOLDER:-/home/wwwroot/tinc/vpn0}
 export GEODB="${GEODB:-}"
-export TINC_HOSTPATH=${TINC_HOSTPATH:-~/painload/retiolum/hosts}
+export TINC_HOSTPATH=${TINC_HOSTPATH:-/etc/tinc/vpn0/hosts}
 mapfile="$INTERNAL_FOLDER/map.html"
 
 if test -n "$GEODB";then
